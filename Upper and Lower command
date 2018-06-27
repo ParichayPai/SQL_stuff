@@ -7,3 +7,8 @@ SELECT UPPER(title) FROM books;
 SELECT CONCAT('MY FAVORITE BOOK IS ', UPPER(title)) FROM books;
  
 SELECT CONCAT('MY FAVORITE BOOK IS ', LOWER(title)) FROM books;
+
+*--->upper and lower can take only one arguement
+so this will work---->
+
+select concat(upper(author_fname),' ',lower(author_lname)) as 'Time_pass_names' from books;
