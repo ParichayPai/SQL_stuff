@@ -29,3 +29,17 @@ VALUES
 ('Oblivion: Stories', 'David', 'Foster Wallace', 2004, 172, 329),
 ('Consider the Lobster', 'David', 'Foster Wallace', 2005, 92, 343);
 
+SELECT database();
+ 
+CREATE DATABASE book_shop;
+ 
+use book_shop;
+ 
+show tables;
+ 
+source book_data.sql
+ 
+DESC books;
+ 
+SELECT * FROM books;
+ 
