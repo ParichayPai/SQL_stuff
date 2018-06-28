@@ -1,3 +1,4 @@
+***the % symbols are called wildcards************
 SELECT title, author_fname FROM books WHERE author_fname LIKE '%da%';
  
 SELECT title, author_fname FROM books WHERE author_fname LIKE 'da%';
