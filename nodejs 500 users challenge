@@ -1,0 +1,42 @@
+------------Problem 1
+
+ select 
+ date_format(created_at,'%M %D %Y') as 'earliest date' 
+ from users 
+ order by created_at limit 1;
+
+----------Problem 2
+
+select 
+email,
+created_at as 'earliest date' 
+from users
+order by created_at limit 1;
+
+-----------Problem 3
+
+select 
+monthname(created_at) as 'month_',
+count(*) as 'earliest date' 
+from users group by month_
+order by earliest date desc;       
+
+-----------Problem 4
+
+select 
+count(*) as 'yahoo users' 
+from users 
+where email like '%yahoo.com' ; 
+
+-----------Problem 5
+
+SELECT CASE 
+         WHEN email LIKE '%@gmail.com' THEN 'gmail' 
+         WHEN email LIKE '%@yahoo.com' THEN 'yahoo' 
+         WHEN email LIKE '%@hotmail.com' THEN 'hotmail' 
+         ELSE 'other' 
+       end      AS provider, 
+       Count(*) AS total_users 
+FROM   users 
+GROUP  BY provider 
+ORDER  BY total_users DESC; 
