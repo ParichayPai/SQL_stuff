@@ -1,0 +1,14 @@
+SHOW TABLES;
+ 
+SHOW COLUMNS FROM tablename;
+ 
+DESC tablename;
+
+-------------------------
+
+Dropping Tables
+DROP TABLE <tablename>; 
+
+A specific example:
+
+DROP TABLE cats; 
